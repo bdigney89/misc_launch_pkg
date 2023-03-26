@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch> 
+    <arg name="tele_speed" default="0.2"/>
+    <arg name="tele_turn" default="0.4"/>
+    
+   <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard" output="screen">
+        <param name="speed" type ="double" value="$(arg tele_speed)"/>   
+        <param name="turn" type ="double" value="$(arg tele_turn)"/>   
+    </node>  
+
+
+</launch>  
